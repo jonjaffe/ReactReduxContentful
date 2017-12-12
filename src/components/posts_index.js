@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPosts, fetchAssets, API_SPACE_ID, API_TOKEN } from '../actions/index';
 import Asset from './asset';
+import { Link } from 'react-router';
 
 class PostsIndex extends Component {
   componentWillMount() {
@@ -15,6 +16,7 @@ class PostsIndex extends Component {
           <h3>{post.fields.title}</h3>
           <p>{post.fields.description}</p>
           <Asset assetId={post.fields.featuredImage.sys.id} />
+          <Link to={"entries/" + post.fields.title}>Check it out</Link>
         </div>
       );
     });
