@@ -23,7 +23,7 @@ class PostsIndex extends Component {
   }
   render() {
     return (
-      <div className>
+      <div>
         <h2>Blog Posts</h2>
         <div className='post_index_container'>
           {this.renderPosts()}
